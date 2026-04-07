@@ -16,8 +16,8 @@ def register_view(request):
             login(request, user)
             messages.success(request, 'Registration successful. You are now logged in.')
             return redirect('media_assets:dashboard')
-        else:
-            form = UserRegistrationForm()
+    else:
+        form = UserRegistrationForm()
     return render(request, 'accounts/register.html', 
                   {'form': form})
 
